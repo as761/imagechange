@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Webpage</title>
+    <script lang="text/javascript">
+        var voteA = 0;
+        var imgchange = sbi.png;
+
+        function voteNow() {
+            voteA = voteA + 1;
+            document.getElementById("viewone").innerHTML = voteA;
+            if (imgchange == "sbi.png") {
+                document.getElementById('imgs').src = "sbi.png";
+                imgchange = "cbi.png";
+            } else {
+                document.getElementById('imgs').src = "cbi.png";
+                imgchange = "sbi.png";
+
+            }
+            //alert(voteA);
+        }
+    </script>
+</head>
+
+<body>
+    <center><img src="sbi.png" alt="SBI" height="200" id="imgs" width="250" onclick="voteNow()">
+        <div id="viewone">
+            <p>0</p>
+        </div>
+    </center>
+</body>
+
+</html>
